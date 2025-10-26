@@ -14,10 +14,9 @@ public class Pages : ScriptableObject
     {
         public int id;
         public string text;
+        public static Action<List<string>> OnOptionsToActive;
 
         private Variable variableActivated;
-
-        public static Action<List<string>> OnOptionsToActive;
 
         public List<string> GetAllWordsBetweenBraces(string input)
         {
@@ -53,16 +52,12 @@ public class Pages : ScriptableObject
                 {
                     if (variable.hasChosen && variable.key == ("{" + word + "}"))
                     {
-                        Debug.Log("REPLACE");
                         newText = newText.Replace(variable.key, variable.GetChosenOption());
                         OnOptionsToActive?.Invoke(options); // Enviamos la lista vacia para que se desactiven las opciones
-                        Debug.Log(variable.GetChosenOption());
                     }
                     else if (variable.hasChosen == false && variable.key == ("{" + word + "}"))
                     {
                         newText = newText.Replace(variable.key, new string('_', word.Length));
-                        Debug.Log("NOT CHOSEN");
-
                         variableActivated = variable;
 
                         foreach (var option in variable.options.values)
@@ -80,7 +75,6 @@ public class Pages : ScriptableObject
 
         public void SetChosenOption(string option)
         {
-            Debug.Log(option);
             variableActivated.Chosen(option);
             variableActivated = null;
         }

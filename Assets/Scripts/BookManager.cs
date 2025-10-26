@@ -92,8 +92,8 @@ public class BookManager : MonoBehaviour
     {
         nextPageIndex = FindNextIndexPage(optionText.text); // Mantener esta linea la primera
         currentPage.SetChosenOption(optionText.text);
-        ShowNewText();
 
+        ShowNewText();
         ShowChangePageButton(true);
     }
 
@@ -114,7 +114,6 @@ public class BookManager : MonoBehaviour
     {
         nextPageButton.gameObject.SetActive(change);
     }
-
 
     private void ResetOptions()
     {
