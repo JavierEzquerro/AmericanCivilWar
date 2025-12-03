@@ -15,11 +15,22 @@ MonoBehaviour:
   pages:
   - id: 0
     text: El {attacker} nos sorprendio.
+    finalPage: 0
   - id: 1
     text: Carlos lucho contra el {attacker}
+    finalPage: 0
   - id: 2
     text: Carlos lucho y gano
+    finalPage: 0
   - id: 3
     text: El {attacker} era fuerte pero {personaje} lo derroto
+    finalPage: 0
   - id: 4
     text: '{personaje} salio mal herido por el {attacker}'
+    finalPage: 0
+  - id: 5
+    text: Puzzle
+    finalPage: 0
+  - id: 6
+    text: Final de la historia
+    finalPage: 1

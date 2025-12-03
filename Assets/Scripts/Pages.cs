@@ -16,6 +16,9 @@ public class Pages : ScriptableObject
         public string text;
         public static Action<List<string>> OnOptionsToActive;
 
+        public bool finalPage = false; 
+        public bool puzzlePage = false;
+
         private Variable variableActivated;
 
         public List<string> GetAllWordsBetweenBraces(string input)

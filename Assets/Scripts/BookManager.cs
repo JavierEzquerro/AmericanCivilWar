@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static Pages;
@@ -15,19 +16,22 @@ public class BookManager : MonoBehaviour
     [SerializeField] private GameObject optionsToChose;
 
     [SerializeField] private GameObject nextPageButton;
+    [SerializeField] private GameObject finalPageButton;
 
-    private Page currentPage;
+    [SerializeField] private GameObject startBook;
+
+    private Pages.Page currentPage;
     private int currentPageIndex;
-    private int nextPageIndex; 
+    private int nextPageIndex;
 
     private void OnEnable()
     {
-        Page.OnOptionsToActive += ShowOptions;
+        Pages.Page.OnOptionsToActive += ShowOptions;
     }
 
     private void OnDisable()
     {
-        Page.OnOptionsToActive -= ShowOptions;
+        Pages.Page.OnOptionsToActive -= ShowOptions;
     }
 
     private void Start()
@@ -38,25 +42,37 @@ public class BookManager : MonoBehaviour
 
     private void Init()
     {
+        currentPageIndex = 0;
         currentPage = pages.GetPage(currentPageIndex);
         ShowNewText();
     }
 
     public void NextPage()
     {
-        currentPageIndex = nextPageIndex; 
+        currentPageIndex = nextPageIndex;
         currentPage = pages.GetPage(currentPageIndex);
+
+        nextPageIndex++;
+        if (nextPageIndex >= pages.pages.Length - 1) nextPageIndex = pages.pages.Length - 1;
+
         ShowNewText();
     }
 
     public void ShowNewText()
     {
         currentText.text = currentPage.ReplaceText(narrativeVariables.variables);
+
+        if (currentPage.finalPage)
+        {
+            nextPageButton.SetActive(false);
+            optionsToChose.SetActive(false);
+            finalPageButton.SetActive(true);
+        }
     }
 
     public void ShowOptions(List<string> options)
     {
-        if(options.Count <= 0)
+        if (options.Count <= 0)
         {
             ShowChangePageButton(true);
 
@@ -91,6 +107,8 @@ public class BookManager : MonoBehaviour
     public void ChosenOption(TextMeshProUGUI optionText)
     {
         nextPageIndex = FindNextIndexPage(optionText.text); // Mantener esta linea la primera
+        Debug.Log("If there are options: " + nextPageIndex);
+
         currentPage.SetChosenOption(optionText.text);
 
         ShowNewText();
@@ -100,11 +118,11 @@ public class BookManager : MonoBehaviour
     private int FindNextIndexPage(string chosedOption)
     {
         var variable = currentPage.GetActiveVariable();
-        int nextID = 0; 
+        int nextID = 0;
 
         foreach (var option in variable.options.values)
         {
-            if(option.value == chosedOption) nextID = option.nextPageID;
+            if (option.value == chosedOption) nextID = option.nextPageID;
         }
 
         return nextID;
@@ -113,6 +131,24 @@ public class BookManager : MonoBehaviour
     private void ShowChangePageButton(bool change)
     {
         nextPageButton.gameObject.SetActive(change);
+    }
+
+    public void StartBook()
+    {
+        startBook.SetActive(false);
+    }
+
+    public void FinishBook()
+    {
+        // Logica Del final 
+        ResetOptions();
+        startBook.SetActive(true);
+        Init();
+    }
+
+    public void Exit()
+    {
+        //Application.Quit();
     }
 
     private void ResetOptions()
