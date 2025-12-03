@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static NarrativeVariables;
 
@@ -16,8 +17,7 @@ public class Pages : ScriptableObject
         public string text;
         public static Action<List<string>> OnOptionsToActive;
 
-        public bool finalPage = false; 
-        public bool puzzlePage = false;
+        public bool finalPage = false;
 
         private Variable variableActivated;
 
@@ -38,6 +38,7 @@ public class Pages : ScriptableObject
 
         public string ReplaceText(Variable[] variables)
         {
+            Debug.Log("-1");
             string newText = text;
 
             List<string> results = GetAllWordsBetweenBraces(text);
@@ -45,6 +46,7 @@ public class Pages : ScriptableObject
 
             if (results.Count <= 0)
             {
+                Debug.Log("0");
                 OnOptionsToActive?.Invoke(options); // Enviamos la lista vacia para que se desactiven las opciones
                 return text;
             }
@@ -55,12 +57,28 @@ public class Pages : ScriptableObject
                 {
                     if (variable.hasChosen && variable.key == ("{" + word + "}"))
                     {
+                        Debug.Log("1");
                         newText = newText.Replace(variable.key, variable.GetChosenOption());
                         OnOptionsToActive?.Invoke(options); // Enviamos la lista vacia para que se desactiven las opciones
+           
                     }
-                    else if (variable.hasChosen == false && variable.key == ("{" + word + "}"))
+                    else if (variable.hasChosen == false && variable.key == ("{" + word + "}") && variable.decision == false)
                     {
+                        Debug.Log("2");
                         newText = newText.Replace(variable.key, new string('_', word.Length));
+                        variableActivated = variable;
+
+                        foreach (var option in variable.options.values)
+                        {
+                            options.Add(option.value);
+                        }
+
+                        OnOptionsToActive?.Invoke(options);
+                    }
+                    else if (variable.hasChosen == false && variable.key == ("{" + word + "}") && variable.decision)
+                    {
+                        Debug.Log("3");
+                        newText = newText.Replace(variable.key, new string(' ', word.Length));
                         variableActivated = variable;
 
                         foreach (var option in variable.options.values)
@@ -72,6 +90,7 @@ public class Pages : ScriptableObject
                     }
                 }
             }
+            Debug.Log("F");
 
             return newText;
         }

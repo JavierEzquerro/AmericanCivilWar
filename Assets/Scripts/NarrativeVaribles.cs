@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.Collections;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "NarrativeVariables", menuName = "Narrative/Narrative Variables")]
 public class NarrativeVariables : ScriptableObject
@@ -8,8 +9,11 @@ public class NarrativeVariables : ScriptableObject
     [System.Serializable]
     public class Variable
     {
+
         public string key;
-        public bool hasChosen = false; 
+        public bool hasChosen = false;
+        public bool decision = false; 
+
         public OptionsToChose options;
 
         private string chosenOption; 
@@ -37,6 +41,8 @@ public class NarrativeVariables : ScriptableObject
     {
         public string value;
         public int nextPageID;
+        public bool isDecisionAndQuest = false;
+        public string questName;
     }
 
     public Variable[] variables;    

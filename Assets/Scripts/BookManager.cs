@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
@@ -20,9 +21,14 @@ public class BookManager : MonoBehaviour
 
     [SerializeField] private GameObject startBook;
 
+    // Quest
+    [SerializeField] private GameObject quest;
+    [SerializeField] private TextMeshProUGUI questText;
+
     private Pages.Page currentPage;
     private int currentPageIndex;
     private int nextPageIndex;
+    private NarrativeVariables.Variable currentVariable;
 
     private void OnEnable()
     {
@@ -44,6 +50,7 @@ public class BookManager : MonoBehaviour
     {
         currentPageIndex = 0;
         currentPage = pages.GetPage(currentPageIndex);
+        finalPageButton.SetActive(false);   
         ShowNewText();
     }
 
@@ -56,10 +63,13 @@ public class BookManager : MonoBehaviour
         if (nextPageIndex >= pages.pages.Length - 1) nextPageIndex = pages.pages.Length - 1;
 
         ShowNewText();
+
+        Debug.Log("Current Variable: " + currentVariable.key);
     }
 
     public void ShowNewText()
     {
+        Debug.Log("ShowText");
         currentText.text = currentPage.ReplaceText(narrativeVariables.variables);
 
         if (currentPage.finalPage)
@@ -74,13 +84,13 @@ public class BookManager : MonoBehaviour
     {
         if (options.Count <= 0)
         {
-            ShowChangePageButton(true);
+            ShowNextPageButton(true);
 
             optionsToChose.gameObject.SetActive(false);
             return;
         }
 
-        ShowChangePageButton(false);
+        ShowNextPageButton(false);
 
         Button[] optionButtons = optionsToChose.GetComponentsInChildren<Button>(true);
 
@@ -106,18 +116,26 @@ public class BookManager : MonoBehaviour
 
     public void ChosenOption(TextMeshProUGUI optionText)
     {
-        nextPageIndex = FindNextIndexPage(optionText.text); // Mantener esta linea la primera
-        Debug.Log("If there are options: " + nextPageIndex);
-
+        currentVariable = currentPage.GetActiveVariable();
         currentPage.SetChosenOption(optionText.text);
 
-        ShowNewText();
-        ShowChangePageButton(true);
+        if (currentVariable != null)
+        {
+            Debug.Log("Current Variable: " + currentVariable.key);
+            Debug.Log("Current Variable Decision: " + currentVariable.decision);
+            if (currentVariable.decision == false) ShowNewText();
+            else optionsToChose.SetActive(false);
+        }
+
+        nextPageIndex = FindNextIndexPage(optionText.text); // Mantener esta linea la primera
+        FindQuest(optionText.text);
+
+        ShowNextPageButton(true);
     }
 
     private int FindNextIndexPage(string chosedOption)
     {
-        var variable = currentPage.GetActiveVariable();
+        var variable = currentVariable;
         int nextID = 0;
 
         foreach (var option in variable.options.values)
@@ -128,7 +146,30 @@ public class BookManager : MonoBehaviour
         return nextID;
     }
 
-    private void ShowChangePageButton(bool change)
+    private void FindQuest(string chosedOption)
+    {
+        var variable = currentVariable;
+
+        if (!variable.decision) return;
+
+        foreach (var option in variable.options.values)
+        {
+            if (option.value == chosedOption && option.isDecisionAndQuest) StartCoroutine(ShowQuest(option.questName));
+        }
+    }
+
+    private IEnumerator ShowQuest(string questCompletedName)
+    {
+        // SONIDOS ANIMACION..
+        questText.text = "Desafio completado: " + questCompletedName;
+        quest.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(2.5f);
+
+        quest.SetActive(false);
+    }
+
+    private void ShowNextPageButton(bool change)
     {
         nextPageButton.gameObject.SetActive(change);
     }

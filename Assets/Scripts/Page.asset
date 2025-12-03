@@ -14,23 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pages:
   - id: 0
-    text: El {attacker} nos sorprendio.
+    text: Los personajes se estan decidiendo si escapar o irse a dormir {decision01}
     finalPage: 0
   - id: 1
-    text: Carlos lucho contra el {attacker}
+    text: Los personajes escapan
     finalPage: 0
   - id: 2
-    text: Carlos lucho y gano
+    text: Los personajes no se deciden, deberian ir por el camino secundario o por
+      el camino principal {decision02}
     finalPage: 0
   - id: 3
-    text: El {attacker} era fuerte pero {personaje} lo derroto
+    text: Los personajes avanzan por el {decision02} y obsevan un {attacker}
     finalPage: 0
   - id: 4
-    text: '{personaje} salio mal herido por el {attacker}'
+    text: Los personajes no sabes si continuar el camino o detenerse {decision03}
     finalPage: 0
   - id: 5
-    text: Puzzle
-    finalPage: 0
+    text: Los personajes deciden continuar y les mata un {attacker}
+    finalPage: 1
   - id: 6
-    text: Final de la historia
+    text: El {attacker} los sorprendio
+    finalPage: 0
+  - id: 7
+    text: Final
     finalPage: 1
