@@ -49,6 +49,7 @@ public class BookManager : MonoBehaviour
     private void Init()
     {
         currentPageIndex = 0;
+        nextPageIndex = 1; 
         currentPage = pages.GetPage(currentPageIndex);
         finalPageButton.SetActive(false);   
         ShowNewText();
@@ -64,7 +65,7 @@ public class BookManager : MonoBehaviour
 
         ShowNewText();
 
-        Debug.Log("Current Variable: " + currentVariable.key);
+        //Debug.Log("Current Variable: " + currentVariable.key);
     }
 
     public void ShowNewText()
