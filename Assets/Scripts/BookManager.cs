@@ -60,8 +60,15 @@ public class BookManager : MonoBehaviour
         currentPageIndex = nextPageIndex;
         currentPage = pages.GetPage(currentPageIndex);
 
-        nextPageIndex++;
-        if (nextPageIndex >= pages.pages.Length - 1) nextPageIndex = pages.pages.Length - 1;
+        if (currentPage.pageConnection.isAPageConnection)
+        {
+            nextPageIndex = currentPage.pageConnection.id;
+        }
+        else
+        {
+            nextPageIndex++;
+            if (nextPageIndex >= pages.pages.Length - 1) nextPageIndex = pages.pages.Length - 1;
+        }
 
         ShowNewText();
 

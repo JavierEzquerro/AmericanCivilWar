@@ -21,6 +21,8 @@ public class Pages : ScriptableObject
 
         private Variable variableActivated;
 
+        public PageConnection pageConnection;
+
         public List<string> GetAllWordsBetweenBraces(string input)
         {
             string pattern = @"\{(.*?)\}";
@@ -112,5 +114,12 @@ public class Pages : ScriptableObject
     public Page GetPage(int id)
     {
         return pages[id];
+    }
+
+    [Serializable]
+    public class PageConnection
+    {
+        public bool isAPageConnection; 
+        public int id;
     }
 }
