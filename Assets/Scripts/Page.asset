@@ -32,102 +32,102 @@ MonoBehaviour:
       note nuestra ausencia. Tenemos que elegir la ruta. {DECISION2}"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 3
     text: "Thomas Green reforz\xF3 la guardia al d\xEDa siguiente. Nunca volvi\xF3
       a haber ninguna una oportunidad para escaparse"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 4
     text: El agua turbia ha ocultado nuestro rastro, pero estamos agotados. Llevamos
       horas caminando y Jonas apenas puede mantenerse en pie.{DECISION3}
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 5
     text: "Gracias por parar... Solo quiero ver un amanecer siendo un hombre libre.
       Ma\xF1ana llegaremos a alguna granja."
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 6
   - id: 6
     text: "\xA1Dios m\xEDo! Parec\xE9is hambrientos. Soy Mary, este es mi esposo
       John. Somos republicanos, esta casa es segura para vosotros. Entrad al establo."
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 7
   - id: 7
     text: "\xA1Chist! Alguien viene. Parece una patrulla de esclavistas. \xA1Escondeos
       atr\xE1s!"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 8
   - id: 8
     text: "\xA1Sabemos que est\xE1n ah\xED, traidores! \xA1Entregadlos! {DECISION4}"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 9
     text: "\xA1Han matado a John! \xA1Malditos sean! Pero gracias a vuestra ayuda
       mis hijos est\xE1n vivos... Corred hacia el bosque, yo los distraer\xE9."
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 11
   - id: 10
     text: "\xBFO\xEDs esos gritos? Est\xE1n matando a toda la familia... Dios nos
       perdone por haber huido."
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 11
   - id: 11
     text: "Los hemos dejado atr\xE1s por poco. Tenemos dos caminos para cruzar la
       frontera natural. {DECISION7}"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 12
     text: Jonas es atacado por una serpiente y escapan como pueden del lago
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 14
   - id: 13
     text: Jonas es atacado por un lobo y escapan como pueden del bosque
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 14
   - id: 14
     text: Las heridas son demasiado graves... Jonas se nos va
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 15
   - id: 15
     text: "No par\xE9is... llegad al fuerte... por m\xED"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 16
   - id: 16
     text: "All\xED est\xE1... El Fuerte McPherson. \xA1Veo la bandera de la Uni\xF3n!"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 17
   - id: 17
-    text: "\xA1Fin del trayecto! \xA1Nadie da un paso m\xE1s! {DECISION 8}"
+    text: "\xA1Fin del trayecto! \xA1Nadie da un paso m\xE1s! {DECISION8}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
     text: "\xA1Llevad a Clara al fuerte! \xA1YO LOS DETENDR\xC9! \xA1CORRED!"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 19
   - id: 19
     text: Clara y Samuel consiguen escapar y llegar al fuerte. Acaban alistandose
     finalPage: 1
@@ -155,20 +155,20 @@ MonoBehaviour:
       o armas {DECISION5}"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
+      isAPageConnection: 1
       id: 0
   - id: 22
     text: "\xA1Ladrones! \xA1Tengo una escopeta!"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 23
   - id: 23
     text: "\xBFO\xEDsteis eso? \xA1Viene de la granja! \xA1A por ellos!"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 24
   - id: 24
     text: "\xBFQue hacemos, a donde vamos? {DECISION6}"
     finalPage: 0
@@ -179,8 +179,8 @@ MonoBehaviour:
     text: "Aqu\xED est\xE1n, a por ellos"
     finalPage: 0
     pageConnection:
-      isAPageConnection: 0
-      id: 0
+      isAPageConnection: 1
+      id: 26
   - id: 26
     text: Los esclavistas acaban atrapando al grupo
     finalPage: 1
