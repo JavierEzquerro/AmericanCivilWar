@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables:
   - key: '{DECISION1}'
-    hasChosen: 0
+    hasChosen: 1
     decision: 1
     options:
       values:
@@ -27,7 +27,7 @@ MonoBehaviour:
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION2}'
-    hasChosen: 0
+    hasChosen: 1
     decision: 1
     options:
       values:
@@ -37,5 +37,83 @@ MonoBehaviour:
         questName: 
       - value: Principal
         nextPageID: 4
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION3}'
+    hasChosen: 1
+    decision: 1
+    options:
+      values:
+      - value: HACER UNA FOGATA Y DESCANSAR
+        nextPageID: 5
+        isDecisionAndQuest: 0
+        questName: 
+      - value: SEGUIR CAMINANDO TODA LA NOCHE
+        nextPageID: 21
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION4}'
+    hasChosen: 1
+    decision: 1
+    options:
+      values:
+      - value: Salvar a la familia O'Donnell
+        nextPageID: 9
+        isDecisionAndQuest: 0
+        questName: 
+      - value: "Huir por la ventana trasera sin mirar atr\xE1s"
+        nextPageID: 10
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION7}'
+    hasChosen: 1
+    decision: 1
+    options:
+      values:
+      - value: LAGO
+        nextPageID: 12
+        isDecisionAndQuest: 0
+        questName: 
+      - value: BOSQUE
+        nextPageID: 13
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION8}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: SACRIFICAR A EZEQUIEL
+        nextPageID: 18
+        isDecisionAndQuest: 0
+        questName: 
+      - value: INTENTAR SALVARSE TODOS JUNTOS
+        nextPageID: 20
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION5}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: NO ROBAR ARMAS
+        nextPageID: 6
+        isDecisionAndQuest: 0
+        questName: 
+      - value: ROBAR ARMAS
+        nextPageID: 22
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION6}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: 'ESCAPAR '
+        nextPageID: 10
+        isDecisionAndQuest: 0
+        questName: 
+      - value: ESCONDERSE
+        nextPageID: 25
         isDecisionAndQuest: 0
         questName: 
