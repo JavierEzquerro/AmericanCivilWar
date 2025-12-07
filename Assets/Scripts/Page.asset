@@ -14,27 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pages:
   - id: 0
-    text: Los personajes se estan decidiendo si escapar o irse a dormir {decision01}
+    text: "\xA1Que nadie descanse! \xA1Quiero esa cosecha lista antes del amanecer!"
     finalPage: 0
   - id: 1
-    text: Los personajes escapan
+    text: "Han llegado noticias del Norte. La Proclamaci\xF3n de Emancipaci\xF3n
+      es real. Si llegamos al fuerte McPherson en Vicksburg, seremos libres. Pero
+      debemos decidir ahora. {DECISION1}"
     finalPage: 0
   - id: 2
-    text: Los personajes no se deciden, deberian ir por el camino secundario o por
-      el camino principal {decision02}
+    text: "\xA1Ya estamos fuera! Pero Clayton Boone soltar\xE1 a los perros en cuanto
+      note nuestra ausencia. Tenemos que elegir la ruta. {DECISION2}"
     finalPage: 0
   - id: 3
-    text: Los personajes avanzan por el {decision02} y obsevan un {attacker}
-    finalPage: 0
-  - id: 4
-    text: Los personajes no sabes si continuar el camino o detenerse {decision03}
-    finalPage: 0
-  - id: 5
-    text: Los personajes deciden continuar y les mata un {attacker}
+    text: "Thomas Green reforz\xF3 la guardia al d\xEDa siguiente. Nunca volvi\xF3
+      a haber ninguna una oportunidad para escaparse"
     finalPage: 1
-  - id: 6
-    text: El {attacker} los sorprendio
-    finalPage: 0
-  - id: 7
-    text: Final
+  - id: 4
+    text: El agua turbia ha ocultado nuestro rastro, pero estamos agotados. Llevamos
+      horas caminando y Jonas apenas puede mantenerse en pie.
     finalPage: 1

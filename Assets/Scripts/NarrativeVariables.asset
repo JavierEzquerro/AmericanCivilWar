@@ -13,55 +13,29 @@ MonoBehaviour:
   m_Name: NarrativeVariables
   m_EditorClassIdentifier: 
   variables:
-  - key: '{decision01}'
+  - key: '{DECISION1}'
     hasChosen: 0
     decision: 1
     options:
       values:
-      - value: escapar
-        nextPageID: 1
-        isDecisionAndQuest: 1
-        questName: Escapar de la granja
-      - value: dormir
-        nextPageID: 7
+      - value: ESCAPAR
+        nextPageID: 2
         isDecisionAndQuest: 0
         questName: 
-  - key: '{decision02}'
+      - value: DORMIR
+        nextPageID: 3
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION2}'
     hasChosen: 0
     decision: 1
     options:
       values:
-      - value: camino principal
-        nextPageID: 3
-        isDecisionAndQuest: 0
-        questName: 
-      - value: camino secundario
-        nextPageID: 3
-        isDecisionAndQuest: 0
-        questName: 
-  - key: '{attacker}'
-    hasChosen: 0
-    decision: 0
-    options:
-      values:
-      - value: oso
+      - value: Secundario
         nextPageID: 4
         isDecisionAndQuest: 0
         questName: 
-      - value: lobo
-        nextPageID: 6
-        isDecisionAndQuest: 0
-        questName: 
-  - key: '{decision03}'
-    hasChosen: 0
-    decision: 1
-    options:
-      values:
-      - value: continuar
-        nextPageID: 5
-        isDecisionAndQuest: 0
-        questName: 
-      - value: detenerse
-        nextPageID: 5
+      - value: Principal
+        nextPageID: 4
         isDecisionAndQuest: 0
         questName: 
