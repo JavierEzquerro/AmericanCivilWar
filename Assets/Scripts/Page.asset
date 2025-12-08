@@ -14,22 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pages:
   - id: 0
-    text: "\xA1Que nadie descanse! \xA1Quiero esa cosecha lista antes del amanecer!"
+    text: "Thomas Green (esclavista):                        \"\xA1Que nadie descanse!
+      \xA1Quiero esa cosecha lista antes del amanecer!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
       id: 0
   - id: 1
-    text: "Han llegado noticias del Norte. La Proclamaci\xF3n de Emancipaci\xF3n
-      es real. Si llegamos al fuerte McPherson en Vicksburg, seremos libres. Pero
-      debemos decidir ahora. {DECISION1}"
+    text: "Jonas (fugitivo protagonista):                           \"Han llegado
+      noticias del Norte. La Proclamaci\xF3n de Emancipaci\xF3n es real. Si llegamos
+      al fuerte McPherson en Vicksburg, seremos libres. Pero debemos decidir ahora.\"
+      {DECISION1}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
       id: 0
   - id: 2
-    text: "\xA1Ya estamos fuera! Pero Clayton Boone soltar\xE1 a los perros en cuanto
-      note nuestra ausencia. Tenemos que elegir la ruta. {DECISION2}"
+    text: "Samuel (fugitivo protagonista):                   \"\xA1Ya estamos fuera!
+      Pero Clayton Boone soltar\xE1 a los perros en cuanto note nuestra ausencia.
+      Tenemos que elegir la ruta.\" {DECISION2}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
@@ -42,135 +45,146 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 0
   - id: 4
-    text: El agua turbia ha ocultado nuestro rastro, pero estamos agotados. Llevamos
-      horas caminando y Jonas apenas puede mantenerse en pie.{DECISION3}
+    text: 'Clara (fugitiva protagonista): "El agua turbia ha ocultado nuestro rastro,
+      pero estamos agotados. Llevamos horas caminando y Jonas apenas puede mantenerse
+      en pie."{DECISION3}'
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 0
   - id: 5
-    text: "Gracias por parar... Solo quiero ver un amanecer siendo un hombre libre.
-      Ma\xF1ana llegaremos a alguna granja."
+    text: "Jonas (fugitivo protagonista): \"Gracias por parar... Solo quiero ver
+      un amanecer siendo un hombre libre. Ma\xF1ana llegaremos a alguna granja.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 6
   - id: 6
-    text: "\xA1Dios m\xEDo! Parec\xE9is hambrientos. Soy Mary, este es mi esposo
-      John. Somos republicanos, esta casa es segura para vosotros. Entrad al establo."
+    text: "Mary O'Donell (republicana): \" \xA1Dios m\xEDo! Parec\xE9is hambrientos.
+      Soy Mary, este es mi esposo John. Somos republicanos, esta casa es segura para
+      vosotros. Entrad al establo.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 7
   - id: 7
-    text: "\xA1Chist! Alguien viene. Parece una patrulla de esclavistas. \xA1Escondeos
-      atr\xE1s!"
+    text: "John O'Donnell (republicano):                           \"\xA1Shhh! Alguien
+      viene. Parece una patrulla de esclavistas. \xA1Escondeos atr\xE1s!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 8
   - id: 8
-    text: "\xA1Sabemos que est\xE1n ah\xED, traidores! \xA1Entregadlos! {DECISION4}"
+    text: "Clayton Boone (esclavista): \"\xA1Sabemos que est\xE1n ah\xED, traidores!
+      \xA1Entregadlos!\" {DECISION4}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 0
   - id: 9
-    text: "\xA1Han matado a John! \xA1Malditos sean! Pero gracias a vuestra ayuda
-      mis hijos est\xE1n vivos... Corred hacia el bosque, yo los distraer\xE9."
+    text: "Mary O'Donnell (republicana):                           \xA1Han matado
+      a John! \xA1Malditos sean! Pero gracias a vuestra ayuda, mis hijos est\xE1n
+      vivos... Corred hacia el bosque, yo los distraer\xE9."
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 11
   - id: 10
-    text: "\xBFO\xEDs esos gritos? Est\xE1n matando a toda la familia... Dios nos
-      perdone por haber huido."
+    text: "Clara (fugitiva protagonista): \"\xBFO\xEDs esos gritos? Est\xE1n matando
+      a toda la familia... Dios nos perdone por hacer huido.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 11
   - id: 11
-    text: "Los hemos dejado atr\xE1s por poco. Tenemos dos caminos para cruzar la
-      frontera natural. {DECISION7}"
+    text: "Ezekiel (fugitivo protagonista):                  \"Los hemos dejado atr\xE1s
+      por poco. Tenemos dos caminos para cruzar la frontera natural.\" {DECISION7}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 0
   - id: 12
-    text: Jonas es atacado por una serpiente y escapan como pueden del lago
+    text: Jonas es atacado por una serpiente y escapan como pueden del lago.
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 14
   - id: 13
-    text: Jonas es atacado por un lobo y escapan como pueden del bosque
+    text: Jonas es atacado por un lobo y escapan como pueden del bosque.
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 14
   - id: 14
-    text: Las heridas son demasiado graves... Jonas se nos va
+    text: 'Clara (fugitiva protagonista): "Las heridas son demasiado graves... Jonas
+      se nos va."'
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 15
   - id: 15
-    text: "No par\xE9is... llegad al fuerte... por m\xED"
+    text: "Jonas (fugitivo protagonista): \"No par\xE9is... llegad al fuerte... por
+      m\xED.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 16
   - id: 16
-    text: "All\xED est\xE1... El Fuerte McPherson. \xA1Veo la bandera de la Uni\xF3n!"
+    text: "Samuel (fugitivo protagonista):                           \"All\xED est\xE1...
+      El Fuerte McPherson. \xA1Veo la bandera de la Uni\xF3n!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 17
   - id: 17
-    text: "\xA1Fin del trayecto! \xA1Nadie da un paso m\xE1s! {DECISION8}"
+    text: "Clayton Boone (esclavista): \"\xA1Fin del trayecto! \xA1Nadie da un paso
+      m\xE1s!\" {DECISION8}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
       id: 0
   - id: 18
-    text: "\xA1Llevad a Clara al fuerte! \xA1YO LOS DETENDR\xC9! \xA1CORRED!"
+    text: "Ezekiel (fugitivo protagonista):                             \"\xA1Llevad
+      a Clara al fuerte! \xA1YO LOS DETENDR\xC9! \xA1CORRED!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 19
   - id: 19
-    text: Clara y Samuel consiguen escapar y llegar al fuerte. Acaban alistandose
+    text: "Clara y Samuel consiguen escapar y llegar al fuerte. Acaban alist\xE1ndose."
     finalPage: 1
     pageConnection:
       isAPageConnection: 0
       id: 0
   - id: 20
-    text: Eran demasiados. El grupo no consigue salvarse
+    text: Eran demasiados. El grupo no consigue salvarse.
     finalPage: 1
     pageConnection:
       isAPageConnection: 0
       id: 0
   - id: 21
-    text: "Es una granja. Est\xE1n durmiendo. Podr\xEDamos entrar y buscar suministros
-      o armas {DECISION5}"
+    text: "Samuel (fugitivo protagonista):                          \"Es una granja.
+      Est\xE1n durmiendo. Podr\xEDamos entrar y buscar suministros o armas.\" {DECISION5}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 0
   - id: 22
-    text: "\xA1Ladrones! \xA1Tengo una escopeta!"
+    text: "John O'Donnell (republicano): \"\xA1Ladrones! \xA1Tengo una escopeta!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 23
   - id: 23
-    text: "\xBFO\xEDsteis eso? \xA1Viene de la granja! \xA1A por ellos!"
+    text: "Clayton Boone (esclavista): \"\xBFO\xEDsteis eso? \xA1Viene de la granja!
+      \xA1A por ellos!\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 24
   - id: 24
-    text: "\xBFQue hacemos, a donde vamos? {DECISION6}"
+    text: "Ezekiel (fugitivo protagonista): \"\xBFQu\xE9 hacemos, a d\xF3nde vamos?\"
+      {DECISION6}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
