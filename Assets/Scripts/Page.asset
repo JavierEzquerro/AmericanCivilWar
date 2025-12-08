@@ -40,7 +40,7 @@ MonoBehaviour:
   - id: 3
     text: "Thomas Green reforz\xF3 la guardia al d\xEDa siguiente. Nunca volvi\xF3
       a haber ninguna una oportunidad para escaparse"
-    finalPage: 0
+    finalPage: 1
     pageConnection:
       isAPageConnection: 1
       id: 0

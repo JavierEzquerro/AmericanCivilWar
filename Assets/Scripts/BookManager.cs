@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -20,10 +21,15 @@ public class BookManager : MonoBehaviour
     [SerializeField] private GameObject finalPageButton;
 
     [SerializeField] private GameObject startBook;
+    [SerializeField] private GameObject book;
 
     // Quest
     [SerializeField] private GameObject quest;
     [SerializeField] private TextMeshProUGUI questText;
+
+    // Fade
+    [SerializeField] private Image fadeImage;      // Fullscreen image used for fading (alpha 0–1)
+    [SerializeField] private float fadeSpeed = 1f; // Higher = faster fade
 
     private Pages.Page currentPage;
     private int currentPageIndex;
@@ -44,18 +50,67 @@ public class BookManager : MonoBehaviour
     {
         ResetOptions();
         Init();
+
+   
+        if (fadeImage != null)
+        {
+            Color c = fadeImage.color;
+            c.a = 0f;
+            fadeImage.color = c;
+        }
     }
 
     private void Init()
     {
         currentPageIndex = 0;
-        nextPageIndex = 1; 
+        nextPageIndex = 1;
         currentPage = pages.GetPage(currentPageIndex);
-        finalPageButton.SetActive(false);   
+        finalPageButton.SetActive(false);
         ShowNewText();
     }
 
+   
+    private IEnumerator FadeInOut(Action midAction)
+    {
+        yield return StartCoroutine(Fade(0f, 1f));
+
+        midAction?.Invoke();
+
+        yield return StartCoroutine(Fade(1f, 0f));
+    }
+
+    private IEnumerator Fade(float startAlpha, float endAlpha)
+    {
+        if (fadeImage == null)
+        {
+            yield break;
+        }
+
+        Color color = fadeImage.color;
+        float t = 0f;
+
+        // Set initial alpha
+        color.a = startAlpha;
+        fadeImage.color = color;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime * fadeSpeed;
+            float alpha = Mathf.Lerp(startAlpha, endAlpha, t);
+            color.a = alpha;
+            fadeImage.color = color;
+            yield return null;
+        }
+
+        color.a = endAlpha;
+        fadeImage.color = color;
+    }
     public void NextPage()
+    {
+        StartCoroutine(FadeInOut(NextPageLogic));
+    }
+
+    private void NextPageLogic()
     {
         currentPageIndex = nextPageIndex;
         currentPage = pages.GetPage(currentPageIndex);
@@ -71,8 +126,6 @@ public class BookManager : MonoBehaviour
         }
 
         ShowNewText();
-
-        //Debug.Log("Current Variable: " + currentVariable.key);
     }
 
     public void ShowNewText()
@@ -135,7 +188,7 @@ public class BookManager : MonoBehaviour
             else optionsToChose.SetActive(false);
         }
 
-        nextPageIndex = FindNextIndexPage(optionText.text); // Mantener esta linea la primera
+        nextPageIndex = FindNextIndexPage(optionText.text); // Keep this line first
         FindQuest(optionText.text);
 
         ShowNextPageButton(true);
@@ -168,7 +221,7 @@ public class BookManager : MonoBehaviour
 
     private IEnumerator ShowQuest(string questCompletedName)
     {
-        // SONIDOS ANIMACION..
+        // Sounds, animation, etc...
         questText.text = "Desafio completado: " + questCompletedName;
         quest.SetActive(true);
 
@@ -184,20 +237,31 @@ public class BookManager : MonoBehaviour
 
     public void StartBook()
     {
+        StartCoroutine(FadeInOut(StartBookLogic));
+    }
+
+    private void StartBookLogic()
+    {
         startBook.SetActive(false);
+        book.SetActive(true);
     }
 
     public void FinishBook()
     {
-        // Logica Del final 
+        StartCoroutine(FadeInOut(FinishBookFade));
+    }
+
+    private void FinishBookFade()
+    {
         ResetOptions();
         startBook.SetActive(true);
+        book.SetActive(false);
         Init();
     }
 
     public void Exit()
     {
-        //Application.Quit();
+        Application.Quit();
     }
 
     private void ResetOptions()
