@@ -39,7 +39,7 @@ MonoBehaviour:
       id: 0
   - id: 3
     text: "Thomas Green reforz\xF3 la guardia al d\xEDa siguiente. Nunca volvi\xF3
-      a haber ninguna una oportunidad para escaparse"
+      a haber ninguna una oportunidad para escaparse."
     finalPage: 1
     pageConnection:
       isAPageConnection: 1
@@ -202,3 +202,55 @@ MonoBehaviour:
     pageConnection:
       isAPageConnection: 0
       id: 0
+  - id: 27
+    text: "Justo antes de dormir, Clara ve c\xF3mo pasa un grupo de esclavistas.
+      A uno de ellos se le cae una llave sin darse cuenta. {DECISION9}"
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 0
+      id: 0
+  - id: 28
+    text: Clara avisa a los esclavistas y recibe un dulce como recompensa.
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 1
+      id: 3
+  - id: 29
+    text: Clara se guarda la llave y decide ir a investigar por su cuenta.
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 0
+      id: 0
+  - id: 30
+    text: "Claudia entra sin hacer ruido en la casa de los esclavistas. La casa est\xE1
+      en silencio, pero justo despu\xE9s se escucha un ruido. {DECISION10}"
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 1
+      id: 3
+  - id: 31
+    text: Clara es descubierta y capturada.
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 1
+      id: 3
+  - id: 32
+    text: "Claudia se encuentra delante de la puerta y no sabe qu\xE9 hacer. {DECISION11}"
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 0
+      id: 0
+  - id: 33
+    text: Los esclavistas la encuentran al volver por el pasillo.
+    finalPage: 0
+    pageConnection:
+      isAPageConnection: 1
+      id: 3
+  - id: 34
+    text: "Clara encuentra unos dulces con los que ella y sus compa\xF1eros sue\xF1an.
+      Coge todos los que puede y decide escapar por la ventana que se encuentra en
+      la despensa."
+    finalPage: 1
+    pageConnection:
+      isAPageConnection: 1
+      id: 3

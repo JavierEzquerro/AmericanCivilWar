@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables:
   - key: '{DECISION1}'
-    hasChosen: 1
+    hasChosen: 0
     decision: 1
     options:
       values:
@@ -23,7 +23,7 @@ MonoBehaviour:
         isDecisionAndQuest: 0
         questName: 
       - value: Dormir
-        nextPageID: 3
+        nextPageID: 27
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION2}'
@@ -117,3 +117,42 @@ MonoBehaviour:
         nextPageID: 25
         isDecisionAndQuest: 0
         questName: 
+  - key: '{DECISION9}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: Avisar a los esclavistas
+        nextPageID: 28
+        isDecisionAndQuest: 0
+        questName: 
+      - value: Guardarse la llave
+        nextPageID: 29
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION10}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: Subir las escaleras
+        nextPageID: 31
+        isDecisionAndQuest: 0
+        questName: 
+      - value: "Entrar en la habitaci\xF3n del frente"
+        nextPageID: 32
+        isDecisionAndQuest: 0
+        questName: 
+  - key: '{DECISION11}'
+    hasChosen: 0
+    decision: 1
+    options:
+      values:
+      - value: Vuelve por donde vino
+        nextPageID: 33
+        isDecisionAndQuest: 0
+        questName: 
+      - value: 'Abre la puerta '
+        nextPageID: 34
+        isDecisionAndQuest: 1
+        questName: 'Has conseguido el logro de: Momentos dulces.'
