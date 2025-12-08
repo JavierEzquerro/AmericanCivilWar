@@ -18,16 +18,16 @@ MonoBehaviour:
     decision: 1
     options:
       values:
-      - value: ESCAPAR
+      - value: Escapar
         nextPageID: 2
         isDecisionAndQuest: 0
         questName: 
-      - value: DORMIR
+      - value: Dormir
         nextPageID: 3
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION2}'
-    hasChosen: 1
+    hasChosen: 0
     decision: 1
     options:
       values:
@@ -40,20 +40,20 @@ MonoBehaviour:
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION3}'
-    hasChosen: 1
+    hasChosen: 0
     decision: 1
     options:
       values:
-      - value: HACER UNA FOGATA Y DESCANSAR
+      - value: Hacer una fogata y descansar
         nextPageID: 5
         isDecisionAndQuest: 0
         questName: 
-      - value: SEGUIR CAMINANDO TODA LA NOCHE
+      - value: Seguir caminando toda la noche
         nextPageID: 21
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION4}'
-    hasChosen: 1
+    hasChosen: 0
     decision: 1
     options:
       values:
@@ -66,15 +66,15 @@ MonoBehaviour:
         isDecisionAndQuest: 0
         questName: 
   - key: '{DECISION7}'
-    hasChosen: 1
+    hasChosen: 0
     decision: 1
     options:
       values:
-      - value: LAGO
+      - value: Lago
         nextPageID: 12
         isDecisionAndQuest: 0
         questName: 
-      - value: BOSQUE
+      - value: Bosque
         nextPageID: 13
         isDecisionAndQuest: 0
         questName: 
@@ -83,11 +83,11 @@ MonoBehaviour:
     decision: 1
     options:
       values:
-      - value: SACRIFICAR A EZEQUIEL
+      - value: Sacrificar a Ezekiel
         nextPageID: 18
         isDecisionAndQuest: 0
         questName: 
-      - value: INTENTAR SALVARSE TODOS JUNTOS
+      - value: Intentar salvarse todos juntos
         nextPageID: 20
         isDecisionAndQuest: 0
         questName: 
@@ -96,11 +96,11 @@ MonoBehaviour:
     decision: 1
     options:
       values:
-      - value: NO ROBAR ARMAS
+      - value: No robar armas
         nextPageID: 6
         isDecisionAndQuest: 0
         questName: 
-      - value: ROBAR ARMAS
+      - value: Robar armas
         nextPageID: 22
         isDecisionAndQuest: 0
         questName: 
@@ -109,11 +109,11 @@ MonoBehaviour:
     decision: 1
     options:
       values:
-      - value: 'ESCAPAR '
+      - value: Escapar
         nextPageID: 10
         isDecisionAndQuest: 0
         questName: 
-      - value: ESCONDERSE
+      - value: Esconderse
         nextPageID: 25
         isDecisionAndQuest: 0
         questName: 

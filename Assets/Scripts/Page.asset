@@ -45,24 +45,25 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 0
   - id: 4
-    text: 'Clara (fugitiva protagonista): "El agua turbia ha ocultado nuestro rastro,
-      pero estamos agotados. Llevamos horas caminando y Jonas apenas puede mantenerse
-      en pie."{DECISION3}'
+    text: 'Clara (fugitiva protagonista):                         "El agua turbia
+      ha ocultado nuestro rastro, pero estamos agotados. Llevamos horas caminando
+      y Jonas apenas puede mantenerse en pie."{DECISION3}'
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 0
   - id: 5
-    text: "Jonas (fugitivo protagonista): \"Gracias por parar... Solo quiero ver
-      un amanecer siendo un hombre libre. Ma\xF1ana llegaremos a alguna granja.\""
+    text: "Jonas (fugitivo protagonista):                    \"Gracias por parar...
+      Solo quiero ver un amanecer siendo un hombre libre. Ma\xF1ana llegaremos a
+      alguna granja.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 6
   - id: 6
-    text: "Mary O'Donell (republicana): \" \xA1Dios m\xEDo! Parec\xE9is hambrientos.
-      Soy Mary, este es mi esposo John. Somos republicanos, esta casa es segura para
-      vosotros. Entrad al establo.\""
+    text: "Mary O'Donell (republicana):                    \" \xA1Dios m\xEDo! Parec\xE9is
+      hambrientos. Soy Mary, este es mi esposo John. Somos republicanos, esta casa
+      es segura para vosotros. Entrad al establo.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
@@ -75,8 +76,8 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 8
   - id: 8
-    text: "Clayton Boone (esclavista): \"\xA1Sabemos que est\xE1n ah\xED, traidores!
-      \xA1Entregadlos!\" {DECISION4}"
+    text: "Clayton Boone (esclavista):                    \"\xA1Sabemos que est\xE1n
+      ah\xED, traidores! \xA1Entregadlos!\" {DECISION4}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
@@ -90,8 +91,8 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 11
   - id: 10
-    text: "Clara (fugitiva protagonista): \"\xBFO\xEDs esos gritos? Est\xE1n matando
-      a toda la familia... Dios nos perdone por hacer huido.\""
+    text: "Clara (fugitiva protagonista):                          \"\xBFO\xEDs esos
+      gritos? Est\xE1n matando a toda la familia... Dios nos perdone por hacer huido.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
@@ -116,15 +117,15 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 14
   - id: 14
-    text: 'Clara (fugitiva protagonista): "Las heridas son demasiado graves... Jonas
-      se nos va."'
+    text: 'Clara (fugitiva protagonista):                      "Las heridas son demasiado
+      graves... Jonas se nos va."'
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
       id: 15
   - id: 15
-    text: "Jonas (fugitivo protagonista): \"No par\xE9is... llegad al fuerte... por
-      m\xED.\""
+    text: "Jonas (fugitivo protagonista):                  \"No par\xE9is... llegad
+      al fuerte... por m\xED.\""
     finalPage: 0
     pageConnection:
       isAPageConnection: 1
@@ -137,8 +138,8 @@ MonoBehaviour:
       isAPageConnection: 1
       id: 17
   - id: 17
-    text: "Clayton Boone (esclavista): \"\xA1Fin del trayecto! \xA1Nadie da un paso
-      m\xE1s!\" {DECISION8}"
+    text: "Clayton Boone (esclavista):                      \"\xA1Fin del trayecto!
+      \xA1Nadie da un paso m\xE1s!\" {DECISION8}"
     finalPage: 0
     pageConnection:
       isAPageConnection: 0
